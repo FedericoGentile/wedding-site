@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<h1 class="separator" id="come_contribuire" style="margin-top:40px">Come farci un regalo</h1>
+    <div class="row" style="padding:25px;">
+        <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+            Se volete contribuire alla partenza della nostra famiglia, potete 
+            inviarci un bonifico. 
+        </div>
+    </div>
+    <div class="row" style="padding:25px;">        
+        <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+            <ul>
+                <li>Intestatario: <b>Federico Alessio Gentile</b></li>
+                <li>IBAN: <b>TOBEFILLED</b></li>
+                <li>BIC: <b>TOBEFILLED</b></li>
+            </ul>	
+        </div>
+    </div>
+    <!--br-->
+	<div class="row" style="padding:25px;">
+        <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+            In alternativa, chi lo desidera puo' fare un bonifico indicando come causale l'articolo della lista nozze che vuole regalarci.
+        </div>
+    </div>
+	
+    <h1 class="separator">Lista Nozze</h1>
+    <!--h2 style="font-family: 'Amatic SC';font-size:35;text-align:center;letter-spacing: 3.5px;">All we need is love...</h2-->
+	
+    <!--div class="row" style="padding:25px;">        
+        <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+            <ul>
+                <li>Intestatario: <b>Federico Alessio Gentile</b></li>
+                <li>IBAN: <b>TOBEFILLED</b></li>
+                <li>BIC: <b>TOBEFILLED</b></li>
+            </ul>
+        </div>
+    </div-->
+    {% for i in range(n_rows) %}
+            <div class="row my-4">
+                <div class="col">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            {% for i, item in lista.iloc[i*3:i*3+3].iterrows() %}
+
+                                <!-- Item {{ i }} -->
+                                <a href="#come_contribuire">
+                                    <div class="col-md-4 col-sm-12 d-flex" style="margin-bottom: 10px;">
+                                        <div class="card" style="width: 100%;;">
+                                            <img class="card-img-top" src="/static/images/{{item.foto}}" alt="{{item.foto}}">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="font-weight:bold;"><a href="#come_contribuire" style="color: inherit;text-decoration: none;">{{item.oggetto}}</a></h5>
+                                                <p class="card-text">{{item.descrizione}}</p>
+                                            </div>
+                                            <div class="card-footer" style="background-color:white;">
+                                                <h6 class="card-title pricing-card-title" style="text-align:center;font-weight:bold;"><a href="#come_contribuire" style="color: inherit;text-decoration: none;">{{item.prezzo}}€</a></h6>
+                                                <!--div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: {{item.ratio}}%" aria-valuenow="{{item.ratio}}" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    {% set color = 'black' %}
+                                                    {% if item.ratio >= 45 %}
+                                                        {% set color = 'white' %}
+                                                    {% endif %}
+                                                <div class="progress-bar-title" style="color:{{color}}">{{item.status}}€</div>
+                                                </div-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>       
+    {% endfor %}
+
+    <!--div class="col-md-12" style="margin-top:40px;background-color:rgb(30, 118, 101);">
+        <h1 class="separator2" style="padding-top:20px;">Viaggio di nozze</h1>
+        <div class="row" style="padding-top:25px;padding-bottom:25px;">
+            <div class="col-lg-6 col-md-12 block1" style="text-align:center;display: flex;justify-content: center;align-items: center;margin-bottom:20px;">
+                <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;color: white;">
+                    Volevamo andare sulla Luna ma pare che abbia chiuso le frontiere. 
+In attesa di fare il giro del mondo, tentiamo una tranquilla luna di miele nella meravigliosa Sicilia… 
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 block2" style="text-align:center;"><img src="{{ url_for('static', filename='images/panorama.jpg') }}" alt="ballo" style="width:75%;"></div>
+        </div>
+    </div-->
+
+    <!--h1 class="separator" id="come_contribuire" style="margin-top:40px">Come farci un regalo</h1-->
+    <!--div class="row" style="padding-top:25px;">
+        <div class="col-lg-6 col-md-12 block1" style="text-align:center;display: flex;justify-content: center;align-items: center;margin-bottom:20px;">
+            <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+                Se volete contribuire alla partenza della nostra famiglia, potete 
+                inviarci un bonifico indicando come causale o l’articolo della lista che vi piace di più oppure un il viaggio di nozze o quello che volete.
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 block1" style="text-align:center;display: flex;justify-content: center;align-items: center;margin-bottom:20px;">
+            <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+                <ul>
+                    <li>Intestatario: <b>Federico Alessio Gentile</b></li>
+                    <li>IBAN: <b>TOBEFILLED</b></li>
+                    <li>BIC: <b>TOBEFILLED</b></li>
+                </ul>
+                oppure
+                <ul>
+                    <li>Intestatario: <b>Maria Cortiula</b></li>
+                    <li>IBAN: <b>TOBEFILLED</b></li>
+                    <li>BIC: <b>TOBEFILLED</b></li>
+                </ul>
+            </div>
+        </div>
+    </div-->
+
+    
+
+    <!--div class="row" style="padding-top:25px;padding-bottom:25px;margin-bottom: 30px;">
+        <div class="col-lg-6 col-md-12 block2" style="text-align:center;"><img src="{{ url_for('static', filename='images/cividale.jpg') }}" alt="maria_maschera" style="width:85%"></div>
+        <div class="col-lg-6 col-md-12 block1" style="text-align:center;display: flex;justify-content: center;align-items: center;margin-bottom:20px;">
+            <div style="text-align:justify; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+                xxx
+                <ul>
+                    <li><b>Intestatari:</b></li>
+                    <li><b>IBAN:</b></li>
+                    <li><b>BIC SWIFT:</b></li>
+                </ul>
+            </div>
+        </div>
+    </div-->
+
+{% endblock %}

@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<!--section class="background" style="background-image: url('/static/images/background_story.jpg');">
+    <div style="margin-top: -100px;">
+        CIAO
+    </div>
+</section-->
+
+
+<!-- Immagine iniziale -->
+<div class="background1" style="background-image: url('/static/images/angelus_millet.jpg');background-position: 50% 30%;">
+
+</div>
+
+<!-- Poesia -->
+<div class="background4" style="background-color: #F3EADA; padding-bottom: 25px;">
+    <div class="row justify-content-center" style="margin-left: 5%;margin-right: 5%; ">
+        <div class="col-lg-7 col-md-9 col-centered" style="background-color:white; margin-top:-10vh;">
+                <div>
+                    <p id="date" style="text-align: center;font-family: 'Amatic SC', sans-serif;text-transform: uppercase;margin-top: 30px;">11 Settembre 2021</p>
+                    <p id="sposi" style="text-align: center;font-family: 'Amatic SC', sans-serif;color:#187E6A;font-weight:600;">Federico & Maria</p>
+                </div>
+                <div >
+                    <div style="margin-left:18%;background-image:url('/static/images/quotation_start.png');background-repeat: no-repeat;width:15%;height:15%;background-size : cover;padding-top: 15%;margin-bottom:-15%;"></div>
+                    <p id="quote" style="text-align: center;padding-left:20%;padding-right:20%;">
+                        <i>La misura dell’amore<br> è <br>amare senza misura</i>
+                    </p>
+                    <div style="margin-right:18%;float:right;background-image:url('/static/images/quotation_end.png');background-repeat: no-repeat;width:15%;height:15%;background-size : cover;padding-top: 15%;margin-top:-15%;"></div> 
+                </div>
+                <div>
+                    <p style="float:right;text-align: center;font-family: 'Amatic SC', sans-serif;color:#187E6A;font-weight:600;padding-left:20%;padding-right:20%; margin-top:10px">San Bernardo di Chiaravalle</p>
+                </div>
+        </div>   
+    </div>
+</div>
+
+<!--  icone -->
+<div class="background4" style="background-color: white;margin-top: 15px;">
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <div class="col-lg-4 d-flex justify-content-center text-center;" style="margin-bottom:5px;border-bottom: 1px solid  rgba(160, 158, 158, 0.363)">
+            
+            <div class="card text-center border-white">
+                <div class="card-header border-white" style="background-color: white;font-weight: bold;text-transform: uppercase;">
+                  Save the date
+                </div>
+                <div class="card-body">
+                    <i class="fas fa-calendar-alt" style="font-size:30px;color:#187E6A;"></i>
+                </div>
+                <div class="card-body" style="padding-left:10px;padding-right:10px;">
+                  <h5 class="card-title" style="font-family: 'Amatic SC', sans-serif; font-weight: bold;">11 Settembre 2021</h5>
+                  <p class="card-text">inizio celebrazione<br>ore 11:30</p>
+                </div>
+                <div class="card-footer border-white" style=" background-color:white">
+                    <a href="{{url_for('responses.rsvp_info')}}" class="btn" style="color:white;background-color:#187E6A;">RSVP</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-4 d-flex justify-content-center text-center;"  style="margin-bottom:5px;border-bottom: 1px solid  rgba(160, 158, 158, 0.363)">
+            
+            <div class="card text-center border-white">
+                <div class="card-header border-white" style="background-color: white;font-weight: bold;text-transform: uppercase;">
+                  Cerimonia
+                </div>
+                <div class="card-body">
+                    <i class="fas fa-church" style="font-size:30px;color:#187E6A;"></i>
+                </div>
+                <div class="card-body" style="padding-left:10px;padding-right:10px;">
+                  <h5 class="card-title" style="font-family: 'Amatic SC', sans-serif;font-weight: bold;">Duomo di S. Maria Assunta</h5>
+                  <p class="card-text" >Cividale del Friuli (UD), Italia</p>
+                </div>
+                <div class="card-footer border-white" style=" background-color:white">
+                    <a href="{{url_for('locations.luoghi')}}" class="btn" style="color:white;background-color:#187E6A;">INFO</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-4 d-flex justify-content-center text-center;"  style="margin-bottom:5px;border-bottom: 1px solid rgba(160, 158, 158, 0.363)">
+            
+            <div class="card text-center border-white">
+                <div class="card-header border-white" style="background-color: white;font-weight: bold;text-transform: uppercase;">
+                  Party
+                </div>
+                <div class="card-body">
+                    <i class="fas fa-glass-cheers" style="font-size:30px;color:#187E6A;"></i>
+                </div>
+                <div class="card-body" style="padding-left:10px;padding-right:10px;">
+                  <h5 class="card-title" style="font-family: 'Amatic SC', sans-serif;font-weight: bold;">Villa de Claricini</h5>
+                  <p class="card-text">Via Boiani 4, <br>Bottenicco (UD), Italia</p>
+                </div>
+                <div class="card-footer border-white" style=" background-color:white">
+                    <a href="{{url_for('locations.luoghi')}}" class="btn" style="color:white;background-color:#187E6A;">INFO</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Info verde -->
+<!--div class="background4" style="background-color:#187E6A;margin-top: 15px;">
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <div class="col-12 d-flex justify-content-center text-center;">
+            <p  style="text-align:center;color:white;font-size:2rem;margin-top:20px;">
+                Certi di un disegno buono nelle circostanze misteriose che viviamo, celebreremo il sacramento del matrimonio secondo le modalità consentite, che ancora non conosciamo.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <p  style="text-align:center;color:white;font-size:2rem;margin-top:20px;">
+            Desiderosi di condividere con voi questa festa, se non fosse possibile riunirci tutti assieme confidiamo che possiate accompagnarci con il pensiero e la preghiera.
+        </p>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <p  style="text-align:center;color:white;font-size:2rem;margin-top:20px;">
+            Fede & Maria
+        </p>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%; margin-bottom:20px;">
+        <a href="{{url_for('responses.rsvp_info')}}" class="btn btn-lg" style="color:white;background-color:#00C89E;">Vorrei essere informato!</a>
+    </div>
+</div-->
+
+<!-- info bianca -->
+<div class="background4" style="background-color: white;margin-top: 45px;">
+    <div class="row justify-content-center" style="margin-left: 20%;margin-right: 20%; margin-bottom: 30px;">
+        <div class="col-12 d-flex justify-content-center text-center;" style="margin-bottom:25px;padding:0px;">
+            <img src="{{ url_for('static', filename='images/fede_maria_venezia.jpg') }}" alt="fede_maria_farfalle" style="width:85%">
+        </div>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 20%;margin-right: 20%;">
+        <div class="col-md-6 col-sm-12 d-flex justify-content-center text-center;" style="margin-bottom:10px;">
+            <a href="{{url_for('story.our_story')}}" class="btn btn-lg" style="color:white;background-color:#187E6A;">Vorrei capire chi siete!</a>
+        </div>
+        <div class="col-md-6 col-sm-12 d-flex justify-content-center text-center;" style="margin-bottom:10px;">
+            <a href="{{url_for('wishlist.lista_nozze')}}" class="btn btn-lg" style="color:white;background-color:#187E6A;">Vorrei farvi un regalo!</a>
+        </div>
+    </div>
+</div>
+
+<!-- countdown -->
+<div class="background4" style="background-color:#187E6A;margin-top: 15px;padding-bottom:25px;">
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <div class="col-12 d-flex justify-content-center text-center;">
+            <p  style="text-align:center;color:white;font-size:1.5rem;margin-top:20px;text-transform: uppercase">
+                Save the date
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <div class="col-12 d-flex justify-content-center text-center;">
+            <p   style="text-align:center;color:white;font-family: 'Amatic SC', sans-serif;font-weight: 500;font-size:2.5rem;margin-bottom:0px;">
+                Sabato 11 Settembre 2021
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <div class="col-12 d-flex justify-content-center text-center;">
+            <p id="demo" style="text-align:center;color:white;font-size:1.5rem;margin-top:20px;"></p>
+        </div>
+    </div>
+    <div class="row justify-content-around" style="margin-left: 23.5%;margin-right: 23.5%;">
+        <div class="col-12 d-flex justify-content-center text-center;">
+            <a href="{{url_for('responses.rsvp_info')}}" class="btn btn-lg" style="color:white;background-color:#00C89E;">Vorrei esserci!</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        if ($('.background4').width() < 510){
+            console.log( $('.background4').width() );
+            $('#date').css('font-size', '7vw')
+            $('#sposi').css('font-size', '11vw')
+            $('#intro').css('width', '75%')
+            $('#quote').css('font-size', '1rem')
+            $('.card-header').css('font-size', '1rem')
+            $('.card-title').css('font-size', '1rem')
+            $('.card-body').css('font-size', '1rem')
+        }
+        else {
+            $('#date').css('font-size', '4vw')
+            $('#sposi').css('font-size', '6vw')
+            $('#intro').css('width', '50%')
+            $('#quote').css('font-size', '1.55rem')
+            $('.card-header').css('font-size', '2rem')
+            $('.card-title').css('font-size', '2rem')
+            $('.card-body').css('font-size', '1.5rem')
+
+        }
+        $( window ).resize(function() {
+            
+            console.log($('.background4').width())
+            if ($('.background4').width() < 510){
+                $('#date').css('font-size', '7vw')
+                $('#sposi').css('font-size', '11vw')
+                $('#intro').css('width', '75%')
+                $('#quote').css('font-size', '1rem')
+                $('.card-header').css('font-size', '1rem')
+                $('.card-title').css('font-size', '1rem')
+                $('.card-body').css('font-size', '1rem')
+            }
+            else {
+                $('#date').css('font-size', '4vw')
+                $('#sposi').css('font-size', '6vw')
+                $('#intro').css('width', '50%')
+                $('#quote').css('font-size', '1.55rem')
+                $('.card-header').css('font-size', '2rem')
+                $('.card-title').css('font-size', '2rem')
+                $('.card-body').css('font-size', '1.5rem')
+            }
+        })
+    });
+</script>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Sep 11, 2021 11:30:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "<span style='font-size:0.7rem'>Giorni</span> " + hours + "<span style='font-size:0.7rem'>Ore</span>  "
+      + minutes + "<span style='font-size:0.7rem'>Minuti</span> " + seconds + "<span style='font-size:0.7rem'>Secondi</span> ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    <div class="col-md-12" style="margin-top: 30px;padding-bottom:20px;margin-bottom:30px;background-color:rgb(30, 118, 101);">
+        <h1 class="separator2" style="padding-top:20px;">Facci sapere se puoi venire!</h1>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        {{ form.username.label(class="form-control-label") }}
+                        {% if form.username.errors %}
+                            {{ form.username(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.username.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.username(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group col-md-6">
+                        {{ form.lastname.label(class="form-control-label") }}
+                        {% if form.lastname.errors %}
+                            {{ form.lastname(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.lastname.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.lastname(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.adults.label(class="form-control-label") }}
+                    {% if form.adults.errors %}
+                        {{ form.adults(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.adults.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.adults(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.children.label(class="form-control-label") }}
+                    {% if form.children.errors %}
+                        {{ form.children(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.children.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.children(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.message.label(class="form-control-label") }}
+                    {% if form.message.errors %}
+                        {{ form.message(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.message.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.message(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-check">
+                    {{form.accomodation(class="form-check-input")}}
+                    {{form.accomodation.label(class="form-check-label")}}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-success btn-lg") }}
+            </div>
+        </form>
+      </div>
+
+      <h1 class="separator">Dove dormire?</h1>
+      <br>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-12 block1" style="text-align:center">
+            <div style="text-align:left; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 26px;">
+                <ul style="list-style-type: none;">
+                    <li><a href="https://www.facebook.com/Casa-Vacanza-Domus-Silvia-631503097474078">Casa Vacanza Domus Silvia</a></li>
+                    <li><a href="https://www.booking.com/hotel/it/locanda-al-pomo-d-39-oro.it.html">Locanda al Pomo d'Oro</a></li>
+                    <li><a href="http://www.almonastero.com/_it/appartamenti.asp">Al Monastero</a></li>
+                    <li><a href="https://www.bed-and-breakfast.it/it/friuli-venezia-giulia/casa-vacanze-vecchie-tre-colonne-cividale-del-friuli/49659">Vecchie Tre Colonne</a></li>
+                    <li><a href="https://www.casaristori.it/">Casa Ristori</a></li>
+                    <li><a href="https://www.facebook.com/casa-vacanze-zia-gioia-284213644928846">Casa Vacanza Zia Gioia</a></li>
+                    <li><a href="https://domusiulii.it/">Domus Iulii</a></li>
+                    <li><a href="http://www.casagalante.it/en">Casa Galante</a></li>
+                    <li><a href="http://www.bedandbreakfastcividale.it/it">Bed and Breakfast Aurora</a></li>
+                    <li><a href="http://daitoscans.it/">Dai Toscans</a></li>
+                    <li><a href="http://www.hotelroma-cividale.it/">Hotel Roma</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 block2" style="text-align:center;"><img src="{{ url_for('static', filename='images/cividale.jpg') }}" alt="maria_maschera" style="width:75%"></div>
+    </div>
+
+    <br>
+
+    <h1 class="separator">Hai Bisogno di aiuto?</h1>
+    <div class="row" style="padding-top:25px;padding-bottom:25px;margin-bottom: 30px;">
+        <div class="col-lg-6 col-md-12 block2" style="text-align:center;"><img src="{{ url_for('static', filename='images/fede_maria_tugendhat_2.jpg') }}" alt="maria_maschera" style="width:75%"></div>
+        <div class="col-lg-6 col-md-12 block1" style="text-align:center;display: flex;justify-content: center;align-items: center;margin-bottom:20px;">
+            <div style="text-align:left; font-family: 'Nunito', sans-serif;font-weight:400;font-size: 27px;">
+                <ul>
+                    <li><span style="font-family: 'Amatic SC';font-size: 24px;">Federico:</span> federicogentile90@gmail.com</li>
+                    <li><span style="font-family: 'Amatic SC';font-size: 24px;">Maria:</span> maria.cortiula@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

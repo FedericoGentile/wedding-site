@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<!--section class="background" style="background-image: url('/static/images/background_story.jpg');">
+    <div style="margin-top: -100px;">
+        CIAO
+    </div>
+</section-->
+
+<div class="background2" style="background-image: url('/static/images/background_luoghi.jpeg');background-position: 50% 35%;">
+    <div class="row justify-content-center d-flex align-items-center" style="height: 45vh;">
+        <div class="col-md-3 col-sm-4 col-centered" style="background-color: rgba(255, 255, 255, 0.75);padding:10px;">
+            <p style="text-align: center;font-family: 'bold', sans-serif;font-size: 20px;text-transform: uppercase;color:#187E6A;"><b>The wedding</b></p>
+            <p style="text-align: center;font-family: 'Amatic SC', sans-serif;font-size: 60px;text-transform: uppercase;color:#187E6A;"><b>I Luoghi</b></p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Cividale -->
+<br>
+<h1 class="separator">Cividale del Friuli</h1>
+<div class="row" style="margin-bottom: 25px;">
+    <div class="col-md-6 col-sm-12">
+        <div class="row" style="margin-bottom: 25px;">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='images/cividale_1.jpg') }}" alt="ballo" style="width:100%">
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 25px;">
+            <div class="col-12">
+                <div id="map_cividale" style="height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='images/cividale_2.jpg') }}" alt="cividale_del_friuli" style="width:100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p  id="cividale_del_friuli" style="text-transform: uppercase;font-weight:bold;font-size: 1.25rem;margin-top:15px;">
+                    Fondata da Giulio Cesare con il nome di Forum Iulii, da cui viene il nome Friuli, nel 568 d.C. Cividale divenne sede del primo ducato longobardo in Italia e in seguito, per alcuni secoli, residenza dei Patriarchi di Aquileia.
+                    La città conserva significative testimonianze longobarde, prima fra tutte il Tempietto, una delle più straordinarie e misteriose architetture alto-medievali occidentali...                    
+                </p>
+            </div>     
+        </div>
+        <div class="row" style="margin-bottom: 25px;">
+            <div class="col-12">
+                <a href="https://www.turismofvg.it/localita/cividale-del-friuli?fbclid=IwAR0VCfiXAu9r0tkV7D4P_4bm9v7L4yh5XdP48luhGHRdsXTRU42USzRFZd4" target="_blank" class="btn btn-lg" style="color:white;background-color:#00C89E;">Scopri di piu...</a>
+            </div>
+        </div>
+    </div>
+</div>
+       
+
+<!-- Chiesa -->
+<br>
+<h1 class="separator">Il Duomo</h1>
+<div class="row" style="margin-bottom: 25px;">
+        <div class="col-md-6 col-sm-12">
+            <img src="{{ url_for('static', filename='images/duomo_cividale.jpg') }}" alt="duomo_cividale" style="width:100%">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="row">
+                <div class="col-12">
+                    <p  id="descrizione_chiesa" style="text-transform: uppercase;font-weight:bold;font-size: 1.25rem;margin-top:15px;">
+                        La prima chiesa sorta in questo luogo risale all'VIII secolo voluta dal patriarca Callisto.
+                        Nel 1348 e nel 1364 fu gravemente danneggiato da un violento terremoto. A metà del XV secolo 
+                        venne affidata a Bartolomeo delle Cisterne, la ricostruzione dell'edificio sacro in stile 
+                        gotico veneziano. I lavori si protrassero per molto tempo e la costruzione rimase incompiuta. Nel 1502 una 
+                        colonna cedette provocando il crollo di buona parte della fabbrica...
+                    </p>
+                </div>     
+            </div>
+            <div class="row" style="margin-bottom: 25px;">
+                <div class="col-12">
+                    <a href="https://www.cividale.com/it/il_duomo?fbclid=IwAR3J8LwKtYVt4XuR0gf9syvZhJ8hc6NWR9Rp50hGFrPeNCDxDJ_PqjAbr3E" target="_blank" class="btn btn-lg" style="color:white;background-color:#00C89E;">Scopri di piu...</a>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="row" style="width: 100%;">
+    <div class="col-12">
+        <div id="map_chiesa" style="height: 400px;"></div>
+    </div>
+</div>
+ 
+
+<!-- Party -->
+<br>
+<h1 class="separator">Party with us!</h1>
+<div class="row" style="margin-bottom: 25px;">
+    <div class="col-md-6 col-sm-12">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='images/villa_de_claricini.jpg') }}" alt="villa_de_claricini" style="width:100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p  style="text-align:center;font-family: 'Amatic SC', sans-serif;text-transform: uppercase;font-weight:bold;font-size: 2.75rem;">
+                    Villa de Claricini Dornpacher 
+                </p>
+            </div>     
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p  id="descrizione_villa" style="text-transform: uppercase;font-weight:bold;font-size: 1.25rem;">
+                    Villa de Claricini Dornpacher si trova a Bottenicco di Moimacco, piccolo borgo rurale alle porte di Cividale del Friuli.
+                    Fu edificata intorno alla metà del sec. XVII dalla famiglia de Claricini Dornpacher e dal 1971 è sede della fondazione 
+                    omonima istituita per volere della contessa Giuditta de Claricini, ultima proprietaria della villa, con lo scopo di 
+                    conservarne il patrimonio avito e promuovere studi e manifestazioni culturali.
+                    Le attività politiche e culturali furono sempre tenute in grande pregio presso i De Claricini...
+                </p>
+            </div>     
+        </div>
+        <div class="row" style="margin-bottom: 25px;">
+            <div class="col-12">
+                <a href="https://www.villadeclaricini.it/" target="_blank" class="btn btn-lg" style="color:white;background-color:#00C89E;">Scopri di piu...</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <div class="row" style="margin-bottom: 25px;">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='images/villa_de_claricini_2.jpg') }}" alt="villa_de_claricini_2" style="width:100%">
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 25px;">
+            <div class="col-12">
+                <div id="map_villa" style="height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- accomodations -->
+<div class="background4" style="background-color:#187E6A;margin-top: 15px;padding-bottom:25px;">
+    <div class="row justify-content-around">
+            <p   style="text-align:center;color:white;font-family: 'Amatic SC', sans-serif;font-weight: 500;font-size:2.5rem;padding-top:25px;">
+                VIENI DA LONTANO?
+            </p>
+    </div>
+    <div class="row justify-content-around">
+            <p style="text-align:center;color:white;font-size:1.5rem">
+                Se cerchi un alloggio ti possiamo aiutare!<br>Compila il <a style="color:white;"href="{{url_for('responses.rsvp_info')}}"><b>form RSVP</b></a>
+            </p>
+    </div>
+    <div id="accomodations" class="row" style="padding-top: 25px;">     
+        <img src="{{ url_for('static', filename='images/fede_maria_girasoli.jpg') }}" alt="federico_maria_girasoli" style="width:100%">    
+    </div>
+</div>
+
+
+
+<script>
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        if ($('.background2').width() < 1000){
+            console.log( $('.background2').width() );
+            $('#descrizione_chiesa').css('font-size', '1rem')
+            $('#descrizione_villa').css('font-size', '1rem')
+            $('#accomodations').css('margin-left', '15%')
+            $('#accomodations').css('margin-right', '15%')
+
+        }
+        else {
+            $('#descrizione_chiesa').css('font-size', '1.25rem')
+            $('#descrizione_villa').css('font-size', '1.25rem')
+            $('#accomodations').css('margin-left', '20%')
+            $('#accomodations').css('margin-right', '20%')
+
+        }
+        $( window ).resize(function() {
+            
+            console.log($('.background2').width())
+            if ($('.background2').width() < 1000){
+            $('#descrizione_chiesa').css('font-size', '1rem')
+            $('#descrizione_villa').css('font-size', '1rem')
+            $('#accomodations').css('margin-left', '15%')
+            $('#accomodations').css('margin-right', '15%')
+            }
+            else {
+            $('#descrizione_chiesa').css('font-size', '1.25rem')
+            $('#descrizione_villa').css('font-size', '1.25rem')
+            $('#accomodations').css('margin-left', '20%')
+            $('#accomodations').css('margin-right', '20%')
+            }
+        })
+    });
+</script>
+<script>
+
+    /* cividale */
+	var map_cividale = L.map('map_cividale',{
+        fullscreenControl: true
+    }).setView([46.093101421247625, 13.431604869172786], 15);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map_cividale);
+
+    var marker = L.marker([46.093101421247625, 13.431604869172786]).addTo(map_cividale);
+    marker.bindPopup("<h6>Cividale del Friuli</h6><a target='_blank'  href='https://www.google.it/maps/dir//Cividale+del+Friuli/@46.0714503,13.3934923,10.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x477a4d952a9cfd21:0x2c5c50b8d18df89c!2m2!1d13.4292014!2d46.0961711'>Trova direzione </a>").openPopup();
+
+
+    /* chiesa */
+    var churchIcon = L.icon({
+        iconUrl: "{{ url_for('static', filename='images/church_icon.png') }}",
+        iconSize:     [40, 40], // size of the icon
+        iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
+    });
+
+	var map_chiesa = L.map('map_chiesa',{
+        fullscreenControl: true
+    }).setView([46.093101421247625, 13.431604869172786], 15);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map_chiesa);
+
+    var marker = L.marker([46.093101421247625, 13.431604869172786], {icon: churchIcon}).addTo(map_chiesa);
+    marker.bindPopup("<h6>Duomo di Santa Maria Assunta</h6><a target='_blank'  href='https://www.google.com/maps/dir//Duomo+di+Santa+Maria+Assunta,+Vicolo+Marcant.+Nicoletti,+2,+33043+Cividale+del+Friuli+UD,+Italy/@46.0931633,13.396441,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x477a4deb9c07e95d:0xc490a4ec41575aaa!2m2!1d13.4314603!2d46.0931091?hl=en'>Trova direzione </a>").openPopup();
+
+
+    /* villa */
+    var partyIcon = L.icon({
+        iconUrl: "{{ url_for('static', filename='images/party_icon.png') }}",
+        iconSize:     [40, 40], // size of the icon
+        iconAnchor:   [20, 20], // point of the icon which will correspond to marker's location
+        popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var map_villa = L.map('map_villa',{
+            fullscreenControl: true
+        }).setView([46.09614057641395, 13.392701115340753], 15);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(map_villa);
+
+        var marker = L.marker([46.09614057641395, 13.392701115340753], {icon: partyIcon}).addTo(map_villa);
+        marker.bindPopup("<h6>Villa de Claricini</h6><a target='_blank'  href='https://www.google.com/maps/dir//Villa+de+Claricini+Dornpacher,+Via+Boiani,+4,+33040+Bottenicco+UD,+Italy/@46.0955305,13.3926582,15z/data=!4m16!1m6!3m5!1s0x0:0xfe8b242fd1bf68d8!2sVilla+de+Claricini+Dornpacher!8m2!3d46.0955305!4d13.3926582!4m8!1m0!1m5!1m1!1s0x477a4c36315c9e5d:0xfe8b242fd1bf68d8!2m2!1d13.3926582!2d46.0955305!3e2'>Trova direzione </a>").openPopup();
+</script>
+
+{% endblock %}

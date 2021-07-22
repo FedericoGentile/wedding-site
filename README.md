@@ -1,0 +1,2 @@
+- Almost all photos are missing in static
+- Needs to replace secret keys and whatever contains *TOBEFILLED*

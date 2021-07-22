@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<!--section class="background" style="background-image: url('/static/images/background_story.jpg');">
+    <div style="margin-top: -100px;">
+        CIAO
+    </div>
+</section-->
+
+<div class="background2" style="background-image: url('/static/images/background_story.jpeg');background-position: 50% 50%;">
+    <div class="row justify-content-center align-items-center" style="height: 45vh;">
+        <div class="col-md-3 col-sm-4 col-centered" style="background-color: rgba(255, 255, 255, 0.75);padding:10px">
+            <p style="text-align: center;font-family: 'bold', sans-serif;font-size: 20px;text-transform: uppercase;color:#187E6A;"><b>In cammino</b></p>
+            <p style="text-align: center;font-family: 'Amatic SC', sans-serif;font-size: 60px;text-transform: uppercase;color:#187E6A;"><b>La nostra storia</b></p>
+        </div>
+    </div>
+</div>
+
+<br>
+<h1 class="separator">Come siamo arrivati fin qui?</h1>
+
+<div class="row">
+    <div class="timeline_our_story">
+        <div class="container_our_story left_our_story">
+            <div class="content_our_story">
+
+                <div class="card" style="border:transparent;width:100%;background-color: transparent;">
+                    <h5 class="card-title" style="text-align:center;font-family: 'Amatic SC', sans-serif;font-weight: bold;color:#187E6A;font-size:2.5rem">Endine Gaiano</h5>
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/fede_piccolo.jpeg') }}" alt="Card image cap">
+                    <div class="card-body" style="padding-left:0px;padding-right:0px;padding-bottom:0px;">
+                    <p class="card-text" style="color:black"><b>Dalle Alpi alle Ande, il Fede è un viandante che vive in felicità e presto con Maria si sposerà.</b>
+                    </p>
+                    <p class="card-text"><small class="text-muted">Since 1990</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container_our_story right_our_story">
+            <div class="content_our_story">
+
+                <div class="card" style="border:transparent;width:100%;background-color: transparent;">
+                    <h5 class="card-title" style="text-align:center;font-family: 'Amatic SC', sans-serif;font-weight: bold;color:#187E6A;font-size:2.5rem">Cividale del Friuli</h5>
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/maria_piccola.jpg') }}" alt="Card image cap">
+                    <div class="card-body" style="padding-left:0px;padding-right:0px;padding-bottom:0px;">
+                    <p class="card-text" style="color:black;">
+                        <b>D'origine friulana, sono nata dopo la festa della befana. Da Cividale son partita e a Brno ho trovato l'amore della mia vita!</b>
+                    </p>
+                    <p class="card-text"><small class="text-muted">Since 1994</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container_our_story left_our_story">
+            <div class="content_our_story">
+
+                <div class="card" style="border:transparent;width:100%;background-color: transparent;">
+                    <h5 class="card-title" style="text-align:center;font-family: 'Amatic SC', sans-serif;font-weight: bold;color:#187E6A;font-size:2.5rem">Brno</h5>
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/ballo_small.jpg') }}" alt="Card image cap">
+                    <div class="card-body" style="padding-left:0px;padding-right:0px;padding-bottom:0px;">
+                    <p class="card-text" style="color:black;"><b>Italsky tanečníci v Brně. Una delle nostre prime uscite insieme</b></p>
+                    <p class="card-text"><small class="text-muted">Feb 2018</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container_our_story right_our_story">
+            <div class="content_our_story">
+
+                <div class="card" style="border:transparent;width:100%;background-color: transparent;">
+                    <h5 class="card-title" style="text-align:center;font-family: 'Amatic SC', sans-serif;font-weight: bold;color:#187E6A;font-size:2.5rem">Polonia</h5>
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/polonia.jpg') }}" alt="Card image cap">
+                    <div class="card-body" style="padding-left:0px;padding-right:0px;padding-bottom:0px;">
+                    <p class="card-text" style="color:black;"><b>La nostra prima vacanza: da Wroclaw a Cracovia, passando per Czestochowa</b></p>
+                    <p class="card-text"><small class="text-muted">Ago 2019</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container_our_story left_our_story">
+            <div class="content_our_story">
+
+                <div class="card" style="border:transparent;width:100%;background-color: transparent;">
+                    <h5 class="card-title" style="text-align:center;font-family: 'Amatic SC', sans-serif;font-weight: bold;color:#187E6A;font-size:2.5rem">Brno & Vienna</h5>
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/serata_covid.jpg') }}" alt="Card image cap">
+                    <div class="card-body" style="padding-left:0px;padding-right:0px;padding-bottom:0px;">
+                    <p class="card-text" style="color:black;"><b>Sabato sera ai tempi del COVID-19</b></p>
+                    <p class="card-text"><small class="text-muted">Ott 2020</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container_our_story right_our_story">
+            <div class="content_our_story">
+
+                <div class="card" style="border:transparent;width:100%;background-color: transparent;">
+                    <h5 class="card-title" style="text-align:center;font-family: 'Amatic SC', sans-serif;font-weight: bold;color:#187E6A;font-size:2.5rem">Vienna</h5>
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/fede_maria_passeggiata.jpg') }}" alt="Card image cap">
+                    <div class="card-body" style="padding-left:0px;padding-right:0px;padding-bottom:0px;">
+                    <p class="card-text" style="color:black;"><b>Perlustrando la nostra prossima città</b></p>
+                    <p class="card-text"><small class="text-muted">Lug 2020</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    if ($('.background2').width() < 400 ){
+        $('.background2').css('padding-top', $('#test').height()*1.0);
+    }
+    $('.middle').css('height', $('#test').height()*1.70);
+</script>
+
+{% endblock %}
